@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiswahili Kwanza — Sarufi Kamili ya Idara</title>
+<meta name="description" content="Kozi kamili ya sarufi ya Kiswahili, sura 55, kwa wanafunzi — inafanya kazi mtandaoni na nje ya mtandao." />
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#16303d" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(() => {
+        // offline install just won't be available; app still works while online
+      });
+    });
+  }
+</script>
+</body>
+</html>
